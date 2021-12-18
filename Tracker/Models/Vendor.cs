@@ -15,5 +15,15 @@ namespace Tracker.Models
       Id = _instances.Count;
       _instances.Add(this);
     }
+
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }
