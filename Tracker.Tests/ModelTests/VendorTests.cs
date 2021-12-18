@@ -81,5 +81,21 @@ namespace Tracker.Tests
       Assert.AreEqual(expectedResult, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      //Arrange
+      string vendorName01 = "Sally's";
+      string vendorName02 = "12th Street Bistro";
+      Vendor newVendor01 = new Vendor(vendorName01, "desc1");
+      Vendor newVendor02 = new Vendor(vendorName02, "desc2");
+
+      //Act
+      Vendor result = Vendor.Find(2);
+
+      //Assert
+      Assert.AreEqual(newVendor02, result);
+    }
+
   }
 }
