@@ -7,7 +7,7 @@ namespace Tracker.Tests
 {
 
   [TestClass]
-  public class TrackerTests : IDisposable
+  public class VendorTests : IDisposable
   {
     public void Dispose()
     {
@@ -63,6 +63,22 @@ namespace Tracker.Tests
 
       //Assert
       CollectionAssert.AreEqual(testVendorList, result);
+    }
+
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      //Arrange
+      string vendorName = "Sally's";
+      string vendorDesc = "delicatessen on Main St.";
+      Vendor newVendor01 = new Vendor(vendorName, vendorDesc);
+
+      //Act
+      int expectedResult = 1;
+      int result = newVendor01.Id;
+
+      //Assert
+      Assert.AreEqual(expectedResult, result);
     }
 
   }
