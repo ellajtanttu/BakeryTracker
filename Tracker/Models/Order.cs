@@ -6,10 +6,10 @@ namespace Tracker.Models
     public string Title { get; set; } // user input
     public string Description { get; set; } // user input
     public int Price { get; } // auto generated
-    public int Date { get; } // auto generated
+    public string Date { get; } // auto generated
     private static List<Order> _instances = new List<Order> { }; // auto generated
 
-    public Order(string title, string description, int price, int date)
+    public Order(string title, string description, int price, string date)
     {
       Title = title;
       Description = description;
@@ -18,14 +18,9 @@ namespace Tracker.Models
       _instances.Add(this);
     }
 
-    // public static List<Vendor> GetAll()
-    // {
-    //   return _instances;
-    // }
-
-    // public static void ClearAll()
-    // {
-    //   _instances.Clear();
-    // }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }
