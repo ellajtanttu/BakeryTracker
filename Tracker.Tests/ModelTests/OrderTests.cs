@@ -51,6 +51,18 @@ namespace Tracker.Tests
       CollectionAssert.AreEqual(testOrder, result);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsFullOrdersList_OrderList()
+    {
+      string testTitle01 = "test title 1";
+      string testTitle02 = "test title 2";
+      Order testOrder01 = new Order(testTitle01, "test description 01", 1, "01/01/21");
+      Order testOrder02 = new Order(testTitle02, "test description 02", 1, "01/01/21");
+      List<Order> testList = new List<Order> {testOrder01, testOrder02};
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(testList, result);
+    }
+
   }
 }
 
