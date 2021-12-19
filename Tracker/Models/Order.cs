@@ -7,6 +7,7 @@ namespace Tracker.Models
     public string Description { get; set; } // user input
     public int Price { get; } // auto generated
     public string Date { get; } // auto generated
+    public int Id { get; }
     private static List<Order> _instances = new List<Order> { }; // auto generated
 
     public Order(string title, string description, int price, string date)
@@ -26,6 +27,11 @@ namespace Tracker.Models
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+
+    public static Order Find(int searchId)
+    {
+      return _instances[searchId-1];
     }
 
   }
