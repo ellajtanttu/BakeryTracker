@@ -3,19 +3,19 @@ namespace Tracker.Models
 {
   public class Order
   {
-    public string Title { get; set; } // user input
-    public string Description { get; set; } // user input
-    public int Price { get; } // auto generated
-    public string Date { get; } // auto generated
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public int Price { get; }
+    public string Date { get; }
     public int Id { get; }
-    private static List<Order> _instances = new List<Order> { }; // auto generated
+    private static List<Order> _instances = new List<Order> { };
 
     public Order(string title, string description, int price, string date)
     {
-      Title = title; // user input
-      Description = description; // user input
-      Price = price; // user input
-      Date = date; // user input
+      Title = title;
+      Description = description;
+      Price = price;
+      Date = date;
       _instances.Add(this);
       Id = _instances.Count;
     }

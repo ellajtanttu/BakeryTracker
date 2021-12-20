@@ -1,6 +1,6 @@
 # Vendor Tracker
 
-#### Vendor Tracking Application for Pierre's Bakery
+#### Vendor and Order Tracking Application for Pierre's Bakery
 ---
 #### By: _**Ella Tanttu**_
 
@@ -11,7 +11,7 @@
 
 ## Description
 
-_TBD - Detailed description that explains the project and what concepts were being practiced._
+_Application which allows Pierre, a baker and entrepreneur, to create lists of his vendors. Each vendor is clickable and holds a list of orders for that vendor. Pierre can add multiple orders to each vendor's page._
 
 ## Setup & Installation Instructions
 

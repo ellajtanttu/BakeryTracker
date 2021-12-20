@@ -65,5 +65,3 @@ namespace Tracker.Tests
 
   }
 }
-
-// (string title, string description, int price, int date)
