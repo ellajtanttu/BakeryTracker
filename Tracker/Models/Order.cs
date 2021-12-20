@@ -12,11 +12,12 @@ namespace Tracker.Models
 
     public Order(string title, string description, int price, string date)
     {
-      Title = title;
-      Description = description;
-      Price = price;
-      Date = date;
+      Title = title; // user input
+      Description = description; // user input
+      Price = price; // user input
+      Date = date; // user input
       _instances.Add(this);
+      Id = _instances.Count;
     }
 
     public static List<Order> GetAll()

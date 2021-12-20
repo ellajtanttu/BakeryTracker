@@ -17,6 +17,7 @@ namespace Tracker.Models
       Description = description;
       _instances.Add(this);
       Id = _instances.Count;
+      Orders = new List<Order> { };
     }
 
     public static List<Vendor> GetAll()
